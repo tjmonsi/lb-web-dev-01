@@ -1,0 +1,177 @@
+<!doctype html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, minimum-scale = 1.0, initial-scale = 1.0, maximum-scale = 5.0, user-scalable=yes, shrink-to-fit=no">
+
+    <title>Hello World</title>
+
+    <meta name="generator" content="Page Generator v1.0.0">
+    <meta name="description" content="This is the description of the page">
+
+    <!-- Meta for Facebook -->
+    <meta property="og:title" content="Title of the Page to be shown in Facebook">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/image-to-be-shown-in-facebook.jpg">
+    <meta property="og:description" content="This is the description of the page that will show in the facebook card">
+
+    <!-- Meta for Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@twitterHandleOfSite">
+    <meta name="twitter:creator" content="@twitterHandleOfCreator">
+    <meta name="twitter:title" content="Title of the Page to be shown in Twitter">
+    <meta name="twitter:description" content="This is the description of the page that will show in the twitter card">
+    <meta name="twitter:image" content="https://example.com/image-to-be-shown-in-twitter.jpg">
+
+    <base href="/">
+
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Title of this Page">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Title of this Page">
+    <link rel="apple-touch-icon"  sizes="48x48" href="images/manifest/images/icons/icon-48x48.png">
+    <link rel="apple-touch-icon"  sizes="72x72" href="images/manifest/images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon"  sizes="96x96" href="images/manifest/images/icons/icon-96x96.png">
+    <link rel="apple-touch-icon"  sizes="128x128" href="images/manifest/images/icons/icon-128x128.png">
+    <link rel="apple-touch-icon"  sizes="144x144" href="images/manifest/images/icons/icon-144x144.png">
+    <link rel="apple-touch-icon"  sizes="152x152" href="images/manifest/images/icons/icon-152x152.png">
+    <link rel="apple-touch-icon"  sizes="192x192" href="images/manifest/images/icons/icon-192x192.png">
+    <link rel="apple-touch-icon"  sizes="384x384" href="images/manifest/images/icons/icon-384x384.png">
+    <link rel="apple-touch-icon"  sizes="512x512" href="images/manifest/images/icons/icon-512x512.png">
+    
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/images/icons/icon-512x512.png">    
+    <meta name="msapplication-TileColor" content="">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <style>
+      /* Styles for the above fold */
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <picture>
+          <source srcset="images/big.png" media="(min-width: 800px)">
+          <img src="images/small.png" alt="Some Logo">
+        </picture>
+        With Title
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/link-1">Link 1</a>
+          </li>
+          
+          <li>
+            <a href="/link-2">Link 2</a>
+          </li>
+          
+          <li>
+            <a href="/link-3">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="drawer">
+      <header>
+        <h2>
+          <picture>
+            <source srcset="images/big.png" media="(min-width: 800px)">
+            <source srcset="images/small.png" media="(max-width: 799px)" >
+            <img src="images/small.png" alt="Some Logo for Sidebar">
+          </picture>
+          With Title
+        </h2>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/link-1">Link 1</a>
+          </li>
+          
+          <li>
+            <a href="/link-2">Link 2</a>
+          </li>
+          
+          <li>
+            <a href="/link-3">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <footer>
+        <h2>Side bar footer</h2>
+      </footer>
+    </div>
+    
+    <main role="main">
+      <header class="banner">
+        <h1>Banner Title</h1>
+        <p>This is the section with a CTA</p>
+        <a href="/cta" class="cta">
+          Click here
+        </a>
+      </header>
+      
+      <article>
+        <header>
+          <h1>Title of the Article</h1>
+        </header>
+        <section>
+          <h3>Section 1 here</h3>
+        </section>
+        
+        <section>
+          <h3>Section 2 here</h3>
+        </section>
+        
+        <section>
+          <h3>Section 3 here</h3>
+        </section>
+        
+        <section>
+          <h3>Section 4 here</h3>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <h1>Main Footer here</h1>
+    </footer>
+
+    <noscript>
+      <link rel="stylesheet" href="style.css">
+    </noscript>
+    
+    <script>
+      // adds styles later
+      var style = document.createElement('link')  
+      style.rel = 'stylesheet'
+      style.href = 'style.css'
+      var first = document.getElementsByTagName('link')[0]
+      first.parentNode.insertBefore(style, first)
+    </script>
+    
+    <script>
+      // Polyfills and other script essentials here
+    </script>
+
+  </body>
+</html>
