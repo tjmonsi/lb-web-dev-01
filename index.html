@@ -61,99 +61,241 @@
 
     <style>
       /* Styles for the above fold */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .header {
+        background: red;
+        min-height: 100px;
+      }
+
+      .h1, .h2 {
+        margin: 0;
+      }
+
+      .container {
+        display: flex;        
+      }
+
+      .sidebar {
+        background: green;
+        flex: 1;
+      }
+
+      .main {
+        background: yellow;
+        flex: 4;
+        min-height: calc(100vh - 300px);
+      }
+
+      .grid-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media screen and (min-width: 600px) and (max-width: 1024px) {
+        .grid-section {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media screen and (min-width: 400px) and (max-width: 599px) {
+        .grid-section {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 399px) {
+        .grid-section {
+          display: block;
+        }
+      }
+
+      .grid-item, .flex-item, .flex-item-fix {
+        background: red;
+        margin: 16px;
+        min-height: 200px;
+      }
+
+      .grid-item:nth-of-type(3n), .flex-item:nth-of-type(3n), .grid-item:nth-of-type(7n), .flex-item:nth-of-type(7n) {
+        background: green;
+      }
+
+      .grid-item:nth-of-type(2n), .flex-item:nth-of-type(2n) {
+        background: blue;
+      }      
+
+      .grid-item:nth-of-type(4n), .flex-item:nth-of-type(4n) {
+        background: purple;
+      }
+
+      .flex-section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .flex-item {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .flex-item-fix {
+        width: 200px;
+      }
+
+      .center-section {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .center-item {
+        display: inline-block;
+        margin: 16px;
+        max-width: 200px;
+        min-height: 200px;
+        width: 100%;
+        background: red;
+      }
+
+
+      .footer {
+        background: blue;
+        min-height: 200px;
+      }
     </style>
   </head>
 
   <body>
-    <header>
-      <h1>
-        <picture>
-          <source srcset="images/big.png" media="(min-width: 800px)">
-          <img src="images/small.png" alt="Some Logo">
-        </picture>
-        With Title
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/link-1">Link 1</a>
-          </li>
-          
-          <li>
-            <a href="/link-2">Link 2</a>
-          </li>
-          
-          <li>
-            <a href="/link-3">Link 3</a>
-          </li>
-        </ul>
-      </nav>
+
+    <header class="header">
+      <h1 class="h1">This is the Title</h1>
     </header>
-    
-    <div class="drawer">
-      <header>
-        <h2>
-          <picture>
-            <source srcset="images/big.png" media="(min-width: 800px)">
-            <source srcset="images/small.png" media="(max-width: 799px)" >
-            <img src="images/small.png" alt="Some Logo for Sidebar">
-          </picture>
-          With Title
-        </h2>
-      </header>
-      <nav>
-        <ul>
-          <li>
-            <a href="/link-1">Link 1</a>
-          </li>
-          
-          <li>
-            <a href="/link-2">Link 2</a>
-          </li>
-          
-          <li>
-            <a href="/link-3">Link 3</a>
-          </li>
-        </ul>
-      </nav>
-      
-      <footer>
-        <h2>Side bar footer</h2>
-      </footer>
+
+    <div class="container">
+      <div class="sidebar">
+        Sidebar
+      </div>
+
+      <main role="main" class="main">
+        Hello World
+
+        <h2 class="h2">Grid</h2>
+        <section class="grid-section">
+
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+          <div class="grid-item">
+            &nbsp;
+          </div>
+
+        </section>
+
+        <h2 class="h2">Flex</h2>
+        <section class="flex-section">
+
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+          <div class="flex-item">
+            &nbsp;
+          </div>
+
+        </section>
+
+        <section class="flex-section">
+
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+          <div class="flex-item-fix">
+            &nbsp;
+          </div>
+
+        </section>
+
+        <section class="center-section">
+          <div class="center-item">
+            &nbsp;
+          </div>
+          <div class="center-item">
+            &nbsp;
+          </div>
+          <div class="center-item">
+            &nbsp;
+          </div>
+          <div class="center-item">
+            &nbsp;
+          </div>
+          <div class="center-item">
+            &nbsp;
+          </div>
+        </section>
+      </main>
     </div>
-    
-    <main role="main">
-      <header class="banner">
-        <h1>Banner Title</h1>
-        <p>This is the section with a CTA</p>
-        <a href="/cta" class="cta">
-          Click here
-        </a>
-      </header>
-      
-      <article>
-        <header>
-          <h1>Title of the Article</h1>
-        </header>
-        <section>
-          <h3>Section 1 here</h3>
-        </section>
-        
-        <section>
-          <h3>Section 2 here</h3>
-        </section>
-        
-        <section>
-          <h3>Section 3 here</h3>
-        </section>
-        
-        <section>
-          <h3>Section 4 here</h3>
-        </section>
-      </article>
-    </main>
-    <footer>
-      <h1>Main Footer here</h1>
+
+    <footer class="footer">
+      Footer
     </footer>
 
     <noscript>
